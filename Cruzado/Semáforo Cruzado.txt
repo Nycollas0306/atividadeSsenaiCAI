@@ -1,0 +1,52 @@
+/*
+Autor: Nycollas Gabriel
+Nomde do programa: Semáfoto
+Data:20/02/2025
+Descrição: Meu primeiro programa em C
+*/
+
+#define pinLedVermelho1 13
+#define tempoLigado 10000
+#define pinLedVerde1 11
+#define tempoLigado 5000
+#define pinLedAmarelo1 12
+#define tempoLigado 4000
+#define pinLedVermelho2 4
+#define tempoLigado 10000
+#define pinLedVerde2 2
+#define tempoLigado 5000
+#define pinLedAmarelo2 3
+#define tempoLigado 4000
+
+void setup()
+{
+  pinMode( pinLedVermelho1, OUTPUT);
+  pinMode( pinLedVerde1, OUTPUT);
+  pinMode( pinLedAmarelo1, OUTPUT);
+  pinMode( pinLedVermelho2, OUTPUT);
+  pinMode( pinLedVerde2, OUTPUT);
+  pinMode( pinLedAmarelo2, OUTPUT);
+}
+    
+ void loop()
+{
+  digitalWrite( pinLedVermelho1, HIGH);
+  digitalWrite( pinLedVerde2, HIGH);
+  delay(3000);
+   
+  digitalWrite( pinLedVerde2, LOW);
+  digitalWrite( pinLedAmarelo2, HIGH); 
+  delay(2000); 
+   
+  digitalWrite( pinLedAmarelo2, LOW);
+  digitalWrite( pinLedVermelho1, LOW);
+  digitalWrite( pinLedVermelho2,HIGH);
+  digitalWrite( pinLedVerde1, HIGH);
+  delay(3000);
+   
+  digitalWrite( pinLedVerde1, LOW);
+  digitalWrite( pinLedAmarelo1, HIGH);
+  delay(2000);
+  digitalWrite( pinLedAmarelo1, LOW);
+  digitalWrite( pinLedVermelho2, LOW);
+}
