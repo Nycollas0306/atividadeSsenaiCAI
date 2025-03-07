@@ -1,0 +1,64 @@
+/*
+Nome do arquivo:
+Autor:Nycollas Gabriel C.P da Silva
+Data:06/03/2025
+*/
+
+#define pinLedBranco 13
+#define pinLedVermelho 12
+#define pinLedLaranja 11
+#define pinLedAmarelo 10
+#define pinLedVerde 9
+#define pinLedAzul 8
+void setup()
+{
+  Serial.begin(9600);
+  
+  pinMode(pinLedBranco, OUTPUT);
+  pinMode(pinLedVermelho, OUTPUT);
+  pinMode(pinLedLaranja, OUTPUT);
+  pinMode(pinLedAmarelo, OUTPUT);
+  pinMode(pinLedVerde, OUTPUT);
+  pinMode(pinLedAzul, OUTPUT); 
+  
+  int ventania = 4;
+  
+  switch(ventania)
+  {
+    case 0:
+    digitalWrite(pinLedBranco, HIGH);
+    Serial.println(" PESSIMO ");
+    break;
+    
+    case 1:
+    digitalWrite(pinLedVermelho, HIGH);
+    Serial.println(" RUIM ");
+    break;
+    
+    case 2: 
+    digitalWrite(pinLedLaranja, HIGH);
+    Serial.println(" NORMAL ");
+    break;
+    
+    case 3:
+    digitalWrite(pinLedAmarelo, HIGH);
+    Serial.println(" BOA ");
+    break;
+    
+    case 4:
+    digitalWrite(pinLedVerde, HIGH);
+    Serial.println(" EXCELENTE ");
+    break;
+    
+    default:
+   Serial.println(" ERRO ");
+    break;
+    
+  }
+    
+}
+
+void loop()
+{
+  
+}
