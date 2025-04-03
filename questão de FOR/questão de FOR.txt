@@ -1,0 +1,26 @@
+#include <Arduino.h>
+#define pinLed 2
+#define pinBotao 0
+
+int vetor[5] = {10, 20, 30, 40, 50};
+
+int resultado = 0;
+
+void setup()
+{
+  pinMode(pinLed, OUTPUT);
+  pinMode(pinBotao, INPUT_PULLUP);
+  Serial.begin(9600);
+  
+  for(int i = 0; i < 5; i++)
+  {
+    resultado = vetor[i] + resultado;
+  }
+  Serial.println(resultado);
+}
+
+void loop() 
+{
+
+}
+

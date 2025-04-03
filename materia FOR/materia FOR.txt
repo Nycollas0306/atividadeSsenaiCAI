@@ -1,0 +1,21 @@
+#include <Arduino.h>
+#define pinLed 2
+#define pinBotao 0
+
+void setup()
+{
+  pinMode(pinLed, OUTPUT);
+  pinMode(pinBotao, INPUT_PULLUP);
+  Serial.begin(9600);
+  delay(2000);
+
+  for(int i = 0; i < 11; i++)
+  {
+    Serial.println(i);
+    digitalWrite(pinLed, HIGH);
+    delay(500);
+    digitalWrite(pinLed, LOW);
+    delay(500);
+  }
+  
+}

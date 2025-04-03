@@ -1,0 +1,44 @@
+#include <Arduino.h>
+
+// PROTOTIPO DAS FUNCOES
+void ligaLed(int);  //definir funcao
+void desligaLed(int);  //definir funcao
+void piscaLed(int, unsigned long);  //definir funcao
+int somaDeDoisNumeros(int, int);  //definir funcao
+
+void setup()  //funcao vazia, 
+{
+  pinMode(2, OUTPUT);  //define se o pino e entrada ou saida
+}
+
+void loop()  //funcao vazia, essa funcao fica repetindo varias vezes o codigo
+{
+  piscaLed(2, 100);  //faz o pino 2 pisca e define 100 milisegundos
+  int resultadoDaSoma = somaDeDoisNumeros(4, 8);  //recebendo o resultado da soma de dois numeros
+  Serial.println(resultadoDaSoma);  //mostra no monitor serial o resultado ou oque voce escrever
+}
+
+void ligaLed(int pin)  //funcao vazia, ligaLed da variavel inteira
+{
+  digitalWrite(pin, HIGH);  //liga o led
+}
+
+void desligaLed(int pin)  //funcao vazia, desligaLed da variavel inteira
+{
+  digitalWrite(pin, LOW);  //desliga o led
+}
+
+void piscaLed(int pin, unsigned long tempo)  //funcao vazia, que retorna o led declarado piscando em uma variavel inteira, e piscando em um tempo declarado na variavel unsigned long tempo
+{
+  ligaLed(pin);  //liga o led que esta definido no pin
+  delay(tempo);  //trava a programacao por um tempo determinado
+  desligaLed(pin); // desligado o led que esta definido no pin
+  delay(tempo);  //trava a programacao por um tempo determinado
+}
+
+int somaDeDoisNumeros(int numeroA, int numeroB)  //
+{
+  int resultado = numeroA + numeroB;  //enviando a soma dos dois numeros para a variavel
+
+  return resultado;  //retorna o resultado
+}
